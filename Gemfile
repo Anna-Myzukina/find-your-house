@@ -12,6 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'fast_jsonapi'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'rubocop', '~>0.81.0'
 
 group :development, :test do
   
