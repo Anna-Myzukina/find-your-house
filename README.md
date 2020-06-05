@@ -35,7 +35,16 @@ To undo the changes corresponding to a particular migration, you can use db:migr
 after you that command you delete that file donot forgor to run
 
         rails db:migrate
-        
+
+### How to start
+
+        rails new name-of-application --webpack=react --database=postgresql -T
+
+* The `-T` flag instructs Rails to skip the generation of test files, since you won’t be writing tests for the purposes of this tutorial. This command is also suggested if you want to use a Ruby testing tool different from the one Rails provides.
+
+* The --webpack instructs Rails to preconfigure for JavaScript with the webpack bundler, in this case specifically for a React application.
+
+
         
 ### Testing https://leanpub.com/everydayrailsrspec/read_sample
 
@@ -61,7 +70,7 @@ Here is a screenshot with example of such image with diagram:
 - [ ] ruby '2.7.0'
 - [ ] 'rails', '~> 6.0.3', '>= 6.0.3.1'
 * 
-I recommended to add next gems:
+##### I recommended to add next gems:
 
 
 
@@ -94,27 +103,13 @@ $ bundle install --without production
 $ rails db:create
 ```
 
-1. Cause we added bootstrap to Gemfile in next step we should create file and add bootstrap to our application
+- [ ] Bootstrap, for styling your front-end components. jQuery and Popper, for working with Bootstrap. Run the following command in your Terminal window to install these packages with the Yarn package manager:
 
-        touch app/assets/stylesheets/custom.scss
+```
+$  yarn add react-router-dom bootstrap jquery popper.js
+```
 
-Inside this file app/assets/stylesheets/custom.scss add next code
-
-        @import "bootstrap-sprockets"; 
-        @import "bootstrap";
-
-2. Cause we added font-awesom in your application.css, include next:
-
-/*
- *= require font-awesome
- */
-
- Inside this file app/assets/stylesheets/custom.scss add next code
-
-        @import "font-awesome";
-
-On this site https://fontawesome.com/?from=io you can choose any icons you want
-
+- [ ] 
 
 
 

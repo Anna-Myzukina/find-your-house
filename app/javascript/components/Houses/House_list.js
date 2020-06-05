@@ -1,21 +1,40 @@
 import React from 'react'
 import { BrowserRouter as Router, Link} from 'react-router-dom'
+import styled from 'styled-components'
+
+const Card = styled.div`
+    border: 1px solid #efefef;
+    background: #fff;
+`
+const HousesImg = styled.div`
+    width: 100%;
+
+    img{
+        height: 75%;
+        width: 75%;
+
+    }
+`
+const HousesName = styled.div``
+const HousesScore = styled.div``
+const HousesPrice = styled.div``
+const HousesLink = styled.div``
 
 
 const House = (props) => {
     return (
-        <div className="card">
-            <div className="houses-img">
+        <Card>
+            <HousesImg>
                 <img src={props.attributes.image_url} alt={props.attributes.name}/>
-            </div>
-            <div className="houses-name">{props.attributes.name}</div>
-            <div className="houses-score">{props.attributes.average_score}</div>
-            <div className="houses-price"></div>
-            <div className="houses-link">
+            </HousesImg>
+            <HousesName>{props.attributes.name}</HousesName>
+            <HousesScore>{props.attributes.average_score}</HousesScore>
+            <HousesPrice></HousesPrice>
+            <HousesLink>
                 // check .house_description
                 <Link to={`/houses/${props.attributes.house_description}`}>View Houses </Link>
-            </div>
-        </div>
+            </HousesLink>
+        </Card>
     )
 }
 

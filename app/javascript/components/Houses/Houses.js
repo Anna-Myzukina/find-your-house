@@ -1,6 +1,31 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import axios from 'axios'
 import House from './House_list'
+import styled from 'styled-components'
+
+const Home = styled.div`
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+`
+const Header = styled.div`
+    padding: 100px 100px 10px 100px;
+    h1 {
+        font-size; 42PX;
+    }
+    `
+const Navigation = styled.div`
+    font-weight: 300;
+    font-size: 26px;
+`
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    padding: 20px;
+`
 
 const Houses = () => {
     const [houses, setHouses ] = useState([])
@@ -25,17 +50,17 @@ const Houses = () => {
     })
 
     return (
-    <div className="home">
-        <div className="header">
+    <Home>
+        <Header>
             <h1>Houses</h1>
-            <div className="subheader">
+            <Navigation>
                 Choose and add to favourites.
-            </div>
-        </div>
-        <div className="grid">
+            </Navigation>
+        </Header>
+        <Grid>
              {grid}
-        </div>
-    </div>    
+        </Grid>
+    </Home>    
     )
 }
 
