@@ -3,7 +3,7 @@
 #
 houses = House.create([
     {
-        name: "Family House",
+        name: "Beautiful Family Appartement",
         image_url: "https://regiodom.pl/portal/sites/regiodom/files/imagecache/755x/images/regiodompl/63/edge_14_0.jpg?n3ej9n"
     },
     {

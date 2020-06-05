@@ -8,6 +8,8 @@ class House < ApplicationRecord
     end
 
     def average_score
+        return 0 unless favourites.count.positive?
+        
         favourites.average(:score).round(2).to_f
     end
 end
