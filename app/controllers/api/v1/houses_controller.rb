@@ -1,6 +1,7 @@
 module Api
-    module v1
-        class HouseController < ApplicationController
+    module V1
+        class HousesController < ApplicationController
+            protect_from_forgery with: :null_session
 
             def index
                 houses = House.all
