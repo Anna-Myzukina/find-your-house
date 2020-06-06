@@ -115,11 +115,15 @@ $  yarn add react-router-dom bootstrap jquery popper.js
 
 ## Users, houses, favourits
 
-I this project we Create models with associations and implement all requested features for users and posts. Add authentication with Devise as described in requirements.
+In this project we Create models with associations and implement all requested features for users, houses and favourites. Add authentication as described in requirements.
 
-rails generate scaffold User first_name:string last_name:string email:string password:string birthday:string gender:string
+```
+rails generate scaffold User first_name:string last_name:string
+```
 
+```
 rails db:migrate
+```
 
 
 

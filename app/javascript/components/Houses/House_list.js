@@ -10,8 +10,8 @@ const HousesImg = styled.div`
     width: 100%;
 
     img{
-        height: 75%;
-        width: 75%;
+        height: 100%;
+        width: 90%;
 
     }
 `
