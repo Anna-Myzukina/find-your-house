@@ -36,15 +36,58 @@ after you that command you delete that file donot forgor to run
 
         rails db:migrate
 
-### How to start
+### How to start with --api
 
-        rails new name-of-application --webpack=react --database=postgresql -T
+        rails new name-of-application --webpack=react --database=postgresql  --api -T
+
+#### This will do next things for you:
 
 * The `-T` flag instructs Rails to skip the generation of test files, since you won’t be writing tests for the purposes of this tutorial. This command is also suggested if you want to use a Ruby testing tool different from the one Rails provides.
 
 * The --webpack instructs Rails to preconfigure for JavaScript with the webpack bundler, in this case specifically for a React application.
 
+* Configure your application to start with a more limited set of middleware than normal. Specifically, it will not include any middleware primarily useful for browser applications (like cookies support) by default.
 
+* Make ApplicationController inherit from ActionController::API instead of ActionController::Base. As with middleware, this will leave out any Action Controller modules that provide functionalities primarily used by browser applications.
+
+* Configure the generators to skip generating views, helpers, and assets when you generate a new resource.
+
+### Start without --api
+
+! If you created your app running next command 
+
+            rails new name-of-application --webpack=react --database=postgresql -T
+
+and now you want to take an existing application and make it an API one, follow the next steps: 
+
+In `config/application.rb` add the following line at the top of the Application class definition:
+
+            config.api_only = true
+            
+In `config/environments/development.rb`, set `config.debug_exception_response_format` to configure the format used in responses when errors occur in development mode.
+
+To render an HTML page with debugging information, use the value `:default`.
+
+            config.debug_exception_response_format = :default
+            
+To render debugging information preserving the response format, use the value `:api`.
+
+            config.debug_exception_response_format = :api
+            
+By default, `config.debug_exception_response_format` is set to `:api`, when config.api_only is set to true.
+
+Finally, inside `app/controllers/application_controller.rb`, instead of:
+
+                        class ApplicationController < ActionController::Base
+                        end
+do:
+
+                        class ApplicationController < ActionController::API
+                        end
+
+        
+        
+        
         
 ### Testing https://leanpub.com/everydayrailsrspec/read_sample
 
