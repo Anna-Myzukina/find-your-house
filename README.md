@@ -1,6 +1,6 @@
 # Final Capstone Project: Find Your House
 
-
+![screen]()
 ### The reset to undo changes. The clean to remove any untracked files and directories.
 
             $ git reset --hard HEAD
