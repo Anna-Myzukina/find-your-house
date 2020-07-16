@@ -1,6 +1,6 @@
 # Final Capstone Project: Find Your House
 
-![screen]()
+![screen](https://github.com/Anna-Myzukina/find-your-house/blob/master/app/assets/images/screen.png)
 ### The reset to undo changes. The clean to remove any untracked files and directories.
 
             $ git reset --hard HEAD
