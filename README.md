@@ -12,7 +12,16 @@
        
 * NOTE itis very important!!! You should install postgresql in your operating system! Next article should help: [How To Install and Use PostgreSQL on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
         
-* This article and video can be useful [The Ultimate Intermediate Ruby on Rails Tutorial: Let’s Create an Entire App!](https://www.freecodecamp.org/news/lets-create-an-intermediate-level-ruby-on-rails-application-d7c6e997c63f/) , also this article [Adding Authentication with Devise](https://guides.railsgirls.com/devise) and video: [Testing with RSpec](https://www.youtube.com/watch?v=71eKcNxwxVY)
+        
+## Materials to study:
+
+* [ ] Article (Let’s Build a CRUD App with Ruby on Rails and React.js)[https://medium.com/@zayneabraham/lets-build-a-crud-app-with-ruby-on-rails-and-react-js-4308205d0adc]
+* [ ] Video Part 1 (Let's build a CRUD app with Ruby on Rails and React.js - Part 1)[https://www.youtube.com/watch?time_continue=49&v=oyjzi837wME&feature=emb_logo]
+* [ ] Video Part 2 (Let's build a CRUD app with Ruby on Rails and React.js - Part 2)[https://www.youtube.com/watch?v=F0xErjOtJAQ]
+* [ ] Video Part 3 (Let's build a CRUD app with Ruby on Rails and React.js - Part 3)[https://www.youtube.com/watch?v=R19RT76rRa8]
+* [ ] This article and video can be useful [The Ultimate Intermediate Ruby on Rails Tutorial: Let’s Create an Entire App!](https://www.freecodecamp.org/news/lets-create-an-intermediate-level-ruby-on-rails-application-d7c6e997c63f/) , 
+* [ ] also this article [Adding Authentication with Devise](https://guides.railsgirls.com/devise) 
+* [ ] and video: [Testing with RSpec](https://www.youtube.com/watch?v=71eKcNxwxVY)
 
 * NOTE If you forgot during creating your app add next peace of code --database=postgresql please follow next article [Making the Change From SQLite3 to PostgreSQL - Ruby on Rails](https://dev.to/torianne02/making-the-change-from-sqlite3-to-postgresql-ruby-on-rails-2m0p) and add postgresql manually : But main you should add lat version of postgress.
 
@@ -146,13 +155,21 @@ $ bundle install --without production
 $ rails db:create
 ```
 
+```
+$ rails db:migrate
+```
+
 - [ ] Bootstrap, for styling your front-end components. jQuery and Popper, for working with Bootstrap. Run the following command in your Terminal window to install these packages with the Yarn package manager:
 
 ```
 $  yarn add react-router-dom bootstrap jquery popper.js
 ```
 
-- [ ] 
+- [ ] To run app
+
+```
+$ rails s
+```
 
 
 
